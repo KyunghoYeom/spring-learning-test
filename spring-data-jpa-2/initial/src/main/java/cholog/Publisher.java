@@ -1,9 +1,6 @@
 package cholog;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Set;
 
@@ -14,6 +11,8 @@ public class Publisher {
     private Long id;
     private String name;
 
+    @OneToMany(mappedBy="Ppublisher")
+    Set<Book> books;
     public Publisher(String name) {
         this.name = name;
     }
