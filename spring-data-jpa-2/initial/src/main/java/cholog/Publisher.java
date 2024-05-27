@@ -11,7 +11,7 @@ public class Publisher {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy="Ppublisher")
+    @OneToMany(mappedBy="Ppublisher")//일관성 유지
     Set<Book> books;
     public Publisher(String name) {
         this.name = name;

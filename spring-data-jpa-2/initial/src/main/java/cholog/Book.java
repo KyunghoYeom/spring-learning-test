@@ -1,10 +1,14 @@
 package cholog;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +29,7 @@ public class Book {
     public Book(String name, Publisher publisher) {
     }
 
-    public Long getId() {
+   /* public Long getId() {
         return id;
     }
 
@@ -39,5 +43,5 @@ public class Book {
 
     public Set<Author> getAuthors() {
         return null;
-    }
+    }*/
 }
